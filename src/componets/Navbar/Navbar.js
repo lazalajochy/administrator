@@ -10,7 +10,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <a className="nav-link active text-light" aria-current="page" href="/#">Agregar</a>
+                            <a className="nav-link active text-light" aria-current="page" href="/addService">Agregar</a>
                         </li>
                     </ul>
                 </div>
