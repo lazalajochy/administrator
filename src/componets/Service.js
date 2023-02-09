@@ -15,8 +15,14 @@ const Service = () => {
     }
 
     const deleteService = async (id) => {
-        axios.delete(`https://barberbackend-production.up.railway.app/deleteService/${id}`)
-        getServices()
+        if(window.confirm("Do you want")){
+            axios.delete(`https://barberbackend-production.up.railway.app/deleteService/${id}`)
+            .then((res) => {
+                window.location.reload();
+            }).catch((err) => {
+                console.log(err.message)
+            })
+        }
     }
     return(
         <>
