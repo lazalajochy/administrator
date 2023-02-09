@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {useParams} from "react-router-dom"
+
 
 //        const res = await 
 
@@ -7,8 +7,7 @@ const EditService  = () => {
    
   
    
-    const {id} = useParams();
-    console.log(id)
+
 
 
    
