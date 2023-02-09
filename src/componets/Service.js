@@ -30,6 +30,7 @@ const Service = () => {
                                 <th>Nombre</th>
                                 <th>Precio</th>
                                 <th>Descripción</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
