@@ -17,22 +17,22 @@ const Service = () => {
 
     const deleteService = async (id) => {
         confirmAlert({
-            title: 'Seguro que quieres borrar este servicio?',
-            buttons: [
+            title:"Borrar servicio",
+            message:"Estas seguro?",
+            buttons:[
                 {
-                    label: 'Si',
-                    onClick: () => ('Click Si',
+                    label:'Si',
+                    onClick: () => {
                         axios.delete(`https://barberbackend-production.up.railway.app/deleteService/${id}`)
-                            .then((res) => {
-                                window.location.reload()
-                            }).catch((err) => {
-                                console.log(err)
-                            })
-                    )
+                        .then((res) => {
+                            window.location.reload();
+                        }).catch((err) => {
+                            console.log(err)
+                        })
+                    }
                 },
                 {
-                    label: 'No',
-                    onClick: () => ('Click No')
+                    label:'No'
                 }
             ]
         })
