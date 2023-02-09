@@ -1,9 +1,8 @@
-
 const EditService  = () => {
    
     return(
         <div>
-            <h1></h1>
+            <h1>Hola</h1>
         </div>
     )
  
