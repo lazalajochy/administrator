@@ -41,3 +41,22 @@
 .navbar-color{
   background-color: #712cf9;
 }
+
+.listService{
+  padding-top: 20px;
+  text-align: center;
+
+}
+
+.add-Form-container{
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.edit-Form-container{
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+
+}
