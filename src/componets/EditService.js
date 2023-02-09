@@ -1,11 +1,30 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import {useParams, useNavigate} from "react-router-dom"
+import axios from "axios";
+//        const res = await 
 
-const EditService = () => {
-    return (
-        <div className="edit-Form-container col-md-12">
-            <h4>Editar Servicio</h4>
+const EditService  = () => {
+   
+    const [service, setService] = useState([
+       
 
+    ])
+   
+    const {id} = useParams();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        axios.get(`https://barberbackend-production.up.railway.app/getService/${id}`).then((res) => {
+         
+        })
+    },[]);
+    
+    return(
+        <div>
+            <h1></h1>
         </div>
     )
+ 
+              
 }
 export default EditService;
