@@ -17,8 +17,7 @@ const Service = () => {
 
     const deleteService = async (id) => {
         confirmAlert({
-            title:"Borrar servicio",
-            message:"Estas seguro?",
+            message:"Seguro que deseas eliminar este servicio?",
             buttons:[
                 {
                     label:'Si',
@@ -32,7 +31,8 @@ const Service = () => {
                     }
                 },
                 {
-                    label:'No'
+                    label:'No',
+                    onClick: () => {}
                 }
             ]
         })
