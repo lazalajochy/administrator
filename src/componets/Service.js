@@ -60,7 +60,7 @@ const Service = () => {
                                         <td>{service.servicePrice}</td>
                                         <td>{service.serviceDescription}</td>
                                         <td>
-                                            <Link to={`/editService/${service.id}`} className="btn btn-info"><  BsFillPencilFill /></Link>
+                                            <Link to={`/editService/${service.id}`} className="btn btn-info m-2"><  BsFillPencilFill /></Link>
                                             <button onClick={() => deleteService(service.id)} className="btn btn-danger">< BsTrashFill /></button>
 
                                         </td>
