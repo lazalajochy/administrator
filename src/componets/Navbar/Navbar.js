@@ -12,6 +12,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a className="nav-link active text-light" aria-current="page" href="/addService">Agregar</a>
                         </li>
+                        <li className="nav-item">
+                            <a className="nav-link active text-light" aria-current="page" href="/listCustomer">Clientes</a>
+                        </li>
                     </ul>
                 </div>
             </div>

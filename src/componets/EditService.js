@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { confirmAlert } from "react-confirm-alert";
+import 'react-confirm-alert/src/react-confirm-alert.css';
 import { useParams, useNavigate } from "react-router-dom";
 const EditService = () => {
 
@@ -27,16 +29,31 @@ const EditService = () => {
             })
     }
 
-    const updateService = async(e) => {
+    const updateService = async (e) => {
         e.preventDefault()
-        await axios.put(`https://barberbackend-production.up.railway.app/editService/${id}`,{
-            serviceName:serviceName,
-            servicePrice:servicePrice,
-            serviceDescription:serviceDescription
-        })
-        navigate('/')
-    }
+        confirmAlert({
+            message: "Seguro que deseas actualizar?",
+            buttons: [
+                {
+                    label: 'Si',
+                    onClick: async () => {
+                        await axios.put(`https://barberbackend-production.up.railway.app/editService/${id}`, {
+                            serviceName: serviceName,
+                            servicePrice: servicePrice,
+                            serviceDescription: serviceDescription
+                        })
+                        navigate('/')
 
+                    },
+                },
+                {
+                    label:'No',
+                    onClick: () => {}
+                }
+            ]
+        })
+
+    }
 
     return (
         <div className="add-Form-container col-md-12">
